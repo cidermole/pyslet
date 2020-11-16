@@ -158,10 +158,11 @@ which requires a callable object to handle requests.  The
 :py:class:`~pyslet.odata2.server.Server` object implements callable
 behaviour to enable this::
 
-	import logging, threading
-	from wsgiref.simple_server import make_server
+    import logging, threading
+    from wsgiref.simple_server import make_server
+    from pyslet.odata2.server import Server
 
-	cache_app = None		#: our Server instance
+    cache_app = None		#: our Server instance
 
     def run_cache_server():
         """Starts the web server running"""
